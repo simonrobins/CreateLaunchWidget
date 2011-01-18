@@ -1,0 +1,25 @@
+<html>
+  <style>
+    body {
+      margin: 0;
+    }
+    body div {
+      background-image: url(Icon.png);
+      background-repeat: no-repeat;
+      text-align: center;
+      line-height: 128px;
+    }
+    body div span {
+      font-family: verdana;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 18px;
+      -webkit-text-stroke: 1px black;
+      color: white;
+      white-space: nowrap;
+    }
+  </style>
+  <body onclick="widget.openApplication('%@')">
+    <div id="icon"><span>%@</span></div>
+  </body>
+</html>
