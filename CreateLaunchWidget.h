@@ -16,6 +16,8 @@
     NSString *m_appName;
     NSURL    *m_appIcon;
     NSImage  *m_appImage;
+
+    NSString *m_htmlTemplate;
 }
 
 -(void)getDetailsForApplication:(NSString *)filename;

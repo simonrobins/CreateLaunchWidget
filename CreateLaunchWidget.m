@@ -8,21 +8,6 @@
 
 #import "CreateLaunchWidget.h"
 
-static NSString *s_htmlTemplate;
-/*
-    @"<html>"
-        @"<style>"
-            @"body {"
-            @"margin: 0;"
-                @"background-image: url(Icon.png);"
-                @"background-repeat: no-repeat;"
-            @"width: 128px;"
-            @"height: 128px;"
-        @"}"
-        @"</style>"
-        @"<body onclick=\"widget.openApplication('%@')\"></body>"
-    @"</html>";
-*/
 @implementation CreateLaunchWidget
 
 - init
@@ -33,8 +18,8 @@ static NSString *s_htmlTemplate;
         
         m_identifier = [bundle bundleIdentifier];
 
-        s_htmlTemplate = [[NSString alloc] initWithContentsOfFile:[bundle pathForResource:@"index" ofType:@"html"]];
-        NSLog(@"s_htmlTemplate=%@", s_htmlTemplate);
+        m_htmlTemplate = [[NSString alloc] initWithContentsOfFile:[bundle pathForResource:@"index" ofType:@"html"]];
+        NSLog(@"m_htmlTemplate=%@", m_htmlTemplate);
     }
     return self;
 }
@@ -109,7 +94,7 @@ static NSString *s_htmlTemplate;
 
 -(NSFileWrapper *)makeHtml
 {
-    NSString *html = [NSString stringWithFormat:s_htmlTemplate, m_appIdentifier, m_appName];
+    NSString *html = [NSString stringWithFormat:m_htmlTemplate, m_appIdentifier, m_appName];
     NSData *data = [html dataUsingEncoding:NSASCIIStringEncoding];
     return [[[NSFileWrapper alloc] initRegularFileWithContents:data] autorelease];
 }

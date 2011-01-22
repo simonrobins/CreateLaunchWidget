@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BCAC817D12E6681800BE1951 /* Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BCAC818612E6682F00BE1951 /* Build configuration list for PBXAggregateTarget "Package" */;
+			buildPhases = (
+				BCAC817C12E6681800BE1951 /* ShellScript */,
+			);
+			dependencies = (
+				BCAC818112E6682000BE1951 /* PBXTargetDependency */,
+			);
+			name = Package;
+			productName = Package;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 		BC055EAC12E63C7B00D780FE /* CreateLaunchWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = BC055EAA12E63C7B00D780FE /* CreateLaunchWidget.m */; };
@@ -13,7 +28,18 @@
 		BC055EB012E63C8900D780FE /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = BC055EAE12E63C8900D780FE /* Icon.icns */; };
 		BC055EB112E63C8900D780FE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = BC055EAF12E63C8900D780FE /* index.html */; };
 		BC055F8512E63E8900D780FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC055F8412E63E8900D780FE /* Cocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BC05603412E6476C00D780FE /* README in Resources */ = {isa = PBXBuildFile; fileRef = BC05603312E6476C00D780FE /* README */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCAC818012E6682000BE1951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
+			remoteInfo = CreateLaunchWidget;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -25,6 +51,7 @@
 		BC055EAF12E63C8900D780FE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		BC055EC612E63DD000D780FE /* CreateLaunchWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateLaunchWidget.h; sourceTree = "<group>"; };
 		BC055F8412E63E8900D780FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BC05603312E6476C00D780FE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +69,7 @@
 		089C166AFE841209C02AAC07 /* CreateLaunchWidget */ = {
 			isa = PBXGroup;
 			children = (
+				BC05603312E6476C00D780FE /* README */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks */,
@@ -128,6 +156,7 @@
 			projectRoot = "";
 			targets = (
 				8D57630D048677EA00EA77CD /* CreateLaunchWidget */,
+				BCAC817D12E6681800BE1951 /* Package */,
 			);
 		};
 /* End PBXProject section */
@@ -140,10 +169,27 @@
 				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
 				BC055EB012E63C8900D780FE /* Icon.icns in Resources */,
 				BC055EB112E63C8900D780FE /* index.html in Resources */,
+				BC05603412E6476C00D780FE /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCAC817C12E6681800BE1951 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $BUILD_PRODUCTS_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D576311048677EA00EA77CD /* Sources */ = {
@@ -156,6 +202,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCAC818112E6682000BE1951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D57630D048677EA00EA77CD /* CreateLaunchWidget */;
+			targetProxy = BCAC818012E6682000BE1951 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
@@ -204,6 +258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -211,6 +266,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -218,11 +274,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BCAC817E12E6681900BE1951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Package;
+			};
+			name = Debug;
+		};
+		BCAC817F12E6681900BE1951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Package;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -243,6 +322,15 @@
 			buildConfigurations = (
 				1DEB911F08733D790010E9CD /* Debug */,
 				1DEB912008733D790010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCAC818612E6682F00BE1951 /* Build configuration list for PBXAggregateTarget "Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCAC817E12E6681900BE1951 /* Debug */,
+				BCAC817F12E6681900BE1951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

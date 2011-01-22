@@ -20,26 +20,26 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
 	<key>LSUIElement</key>
 	<true/>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>NSServices</key>
 	<array>
 		<dict>
-			<key>NSSendFileTypes</key>
-			<array>
-				<string>com.apple.application-bundle</string>
-			</array>
-			<key>NSMessage</key>
-			<string>createLaunchWidget</string>
-			<key>NSPortName</key>
-			<string>CreateLaunchWidgetService</string>
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
 				<string>Create Launch Widget</string>
 			</dict>
+			<key>NSMessage</key>
+			<string>createLaunchWidget</string>
+			<key>NSPortName</key>
+			<string>CreateLaunchWidgetService</string>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>com.apple.application-bundle</string>
+			</array>
 		</dict>
 	</array>
 </dict>

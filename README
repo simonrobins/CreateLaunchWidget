@@ -1,0 +1,7 @@
+Create Launch Widget Service
+============================
+
+This is a Mac OS X service which applied to an application will create a Dashboard widget
+who's sole purpose is to launch that application.
+
+
